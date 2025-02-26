@@ -13,6 +13,7 @@ const PhotoBooth = ({ setCapturedImages }) => {
     const [autoCapture, setAutoCapture] = useState(false);
 
     useEffect(() => {
+        document.title = 'Photo Booth';
         const fetchCameras = async () => {
         if (navigator.mediaDevices && navigator.mediaDevices.enumerateDevices) {
             const devices = await navigator.mediaDevices.enumerateDevices();
