@@ -14,7 +14,6 @@ function App() {
           <Route path="*" element={<Navigate replace to="/photobooth" />} />
           <Route path="/" element={<Navigate replace to="/photobooth" />} />
           <Route path="/photobooth" element={<PhotoBooth setCapturedImages={setCapturedImages} />} />
-          <Route path="/preview" element={<PhotoPreview capturedImages={capturedImages} />} />
         </Routes>
       </BrowserRouter>
     </div>
