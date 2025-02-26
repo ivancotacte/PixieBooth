@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useRef, useState, useEffect } from "react";
 import PhotoPreview from "./PhotoPreview";
 
 const PhotoBooth = ({ setCapturedImages }) => {
@@ -12,10 +12,6 @@ const PhotoBooth = ({ setCapturedImages }) => {
     const [capturing, setCapturing] = useState(false);
     const [previewMode, setPreviewMode] = useState(false);
     const [autoCapture, setAutoCapture] = useState(false);
-
-    useEffect(() => {
-        document.title = 'Digibooth';
-    }, []);
 
     useEffect(() => {
         const fetchCameras = async () => {
@@ -177,7 +173,7 @@ const PhotoBooth = ({ setCapturedImages }) => {
                         videoRef.current.srcObject = null;
                     }
                     }}
-                    className="mb-4 p-2 rounded">
+                    className="mb-4 p-2 rounded dark:bg-black border dark:border-white">
                     {cameras.map((cam) => (
                     <option key={cam.deviceId} value={cam.deviceId}>
                         {cam.label || "Camera"}
