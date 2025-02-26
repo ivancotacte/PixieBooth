@@ -20,7 +20,7 @@
   width: 550px;
   height: 400px;
   object-fit: cover; 
-  transform: scaleX(-1); 
+  transform: scaleX(-1) scale(0.9); 
   border-radius: 12px;
   border: 3px solid black;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -29,6 +29,7 @@
 .preview {
   width: 250px;
   height: 100%;
+  object-fit: cover;
   border: 1px solid #000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -49,15 +50,10 @@
     height: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
-    transform: scaleX(-1);
+    transform: scaleX(-1) scale(0.9);
     border-radius: 12px;
     border: 3px solid black;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .controls, .filters {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
 
